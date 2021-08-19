@@ -1,0 +1,26 @@
+﻿
+<h2>Staff Details</h2>
+<div>
+    @foreach (var i in d)
+    {
+        <p>@i.TeacherName</p>
+        <p>@i.Post</p>
+
+    }
+</div>
+
+
+@code
+{
+    List<INformation> d;
+    protected override void OnInitialized()
+    {
+        d = new List<INformation>()
+{
+
+            new INformation(){ TeacherName="Guru", Post="Noida",},
+            new INformation(){ TeacherName="Guru", Post="Noida",},
+        };
+
+    }
+}
